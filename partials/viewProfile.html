@@ -1,0 +1,30 @@
+<ion-view >
+  <ion-header-bar>
+    <h1 class = "title">View Profile</h1>
+    <button class="button ion-chevron-left" ng-click="back()"></button>
+    <button class="button ion-edit" ng-click="editProfile()"></button>
+
+  </ion-header-bar>
+  <ion-content>
+
+
+    <img id="profilePic" ng-src="{{user.img}}" style="border-radius=50%; font-size=40;" ng-click="editImage()">
+
+    <ion-label id="profileUsername">{{user.username}}</ion-label>
+
+    <div class="viewProfile">
+      <!--<span class="property">Email </span>-->
+      <span class="value">{{user.email}} </span><br>
+
+      <!--<span class="property">Contact Number </span>-->
+      <span class="value">{{user.phone}} </span><br>
+
+      <!--<span class="property">Address </span>-->
+      <span class="value">{{user.address}} </span><br>
+
+      <!--<span class="property">Date of birth </span>-->
+      <span class="value">{{user.dob}} </span>
+    </div>
+
+  </ion-content>
+</ion-view>

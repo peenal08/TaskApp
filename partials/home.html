@@ -1,0 +1,63 @@
+<ion-side-menus>
+
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-stable " id="menu_color">
+      <h1 class="title">Menu</h1>
+    </header>
+    <ion-content class="has-header">
+      <ion-list>
+        <ion-item menu-close class="menuitem" href="#/viewProfile">View Profile</ion-item>
+        <ion-item menu-close class="menuitem" ng-show="isAdmin" href="#/createUser">Create User</ion-item>
+        <ion-item menu-close class="menuitem" ng-show="isAdmin" href="#/viewUsers">View Users</ion-item>
+        <ion-item menu-close class="menuitem" ng-click="logout()">Exit
+          <ion-icon name="log-out"></ion-icon>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+
+  <ion-side-menu-content>
+    <ion-nav-bar>
+      <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon" ng-click = "toggleLeft()"></button>
+      </ion-nav-buttons>
+
+      <ion-nav-buttons  side="right" >
+        <button class="button button-icon icon ion-plus-circled" ng-show="isSelected" ng-click="showActionSheet()"></button>
+        <button class="button button-icon icon ion-compose" ng-hide="isSelected" ng-click="openModal()"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <ion-nav-view name="menuContent" animation="slide-left-right">
+      <ion-view>
+        <ion-content class="home">
+          <!--<div class="noTask" ng-show="noTask">
+            Great! No pending tasks...
+          </div>-->
+
+            <div class="list card" ng-init="task.isSelected = false" ng-repeat="task in tasks track by $index"
+                 ng-show="(task.username === currentUser || isAdmin) && !(task.isCompleted) "
+                 on-hold=" onHold(task) " ng-style="{ 'background-color' : (task.isSelected ? 'lightblue' : 'none')}">
+
+              <div class="item item-body cardheader">
+                <span ng-show="isAdmin">{{task.username}} 's Task</span >
+                <br>
+                <strong ng-click="viewTask(task)">{{task.taskname}}</strong>
+                <button class="tab-item balanced icon ion-checkmark-round" ng-hide="isAdmin" ng-click="completeTask(task)"></button>
+                <button class="tab-item assertive icon ion-close round" ng-click="deleteTask(task)"></button>
+                <br>
+                <span class="createdTime">This task was made on {{task.createdTime | date:'dd-MM-yyyy @ HH:mm'}}</span>
+              </div>
+              <div class="item tabs tabs-secondary cardfooter" ng-click="viewTask(task)">
+                <span>{{task.text}}</span>
+              </div>
+            </div>
+
+
+
+        </ion-content>
+      </ion-view>
+    </ion-nav-view>
+  </ion-side-menu-content>
+
+</ion-side-menus>

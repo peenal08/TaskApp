@@ -1,0 +1,34 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class = "title">Edit Profile</h1>
+    <button class = "button icon icon-right ion-ios-close-outline modalclose" ng-click = "closeModal()"></button>
+
+  </ion-header-bar>
+
+  <ion-content>
+
+
+      <div >
+
+        <div class="item item-input editProfile">
+          <input type="email" placeholder="Email" ng-model="edit.email"/>
+        </div>
+
+        <div class="item item-input editProfile">
+          <input type="number" placeholder="Contact Number" ng-model="edit.phone"/>
+        </div>
+
+        <textarea class="editProfile" rows="7" placeholder="Address" maxlength="150" ng-model="edit.address"></textarea>
+
+        <div class="item item-input editProfile">
+          <input type="date" placeholder="Date" ng-model="edit.date"/>
+        </div>
+
+        <button class="button button-small ion-chevron-right modalbutton" ng-click = "saveChanges()">
+        </button>
+      </div>
+
+
+
+  </ion-content>
+</ion-modal-view>

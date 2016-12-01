@@ -1,0 +1,20 @@
+<ion-view>
+  <ion-header-bar>
+    <button class = "button ion-chevron-left pull-left" ng-click="back()"></button>
+    <h1 class = "title">All Users</h1>
+    <button class = "button ion-android-person-add pull-right" ng-click="createUser()"></button>
+  </ion-header-bar>
+  <ion-content>
+
+    <!--<label ng-show="noUsers">
+        No Users available
+    </label>-->
+
+    <div  class="row" ng-repeat="user in users">
+      <img class="col col-25 viewUserImg" ng-src="{{user.img}}">
+      <span class="col col-offset-10 viewUsername" >{{user.username}}</span>
+    </div>
+
+
+  </ion-content>
+</ion-view>

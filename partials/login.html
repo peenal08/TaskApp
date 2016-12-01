@@ -1,0 +1,21 @@
+<ion-view >
+  <ion-content>
+
+    <div class="item item-input login">
+      <input type="text" placeholder="Username" ng-model="login.username" required/>
+    </div>
+
+    <div id="loginpassword" class="item item-input login">
+      <input type="password" placeholder="Password" ng-model="login.password" required/>
+    </div>
+
+    <button class="button button-small ion-chevron-right next" ng-click="login()">
+    </button>
+
+    <div>
+      <ion-label>New User ?<a href="#/signUp">  Sign Up</a></ion-label>
+
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,140 @@
+body{
+  overflow : scroll;
+}
+
+ion-content{
+
+   background-image: url("../img/background.jpg");
+}
+
+.bar {
+  background-color : black;
+}
+.bar .title {
+
+  color: rgba(249, 240, 231, 0.74);
+}
+#menu_color{
+ background-color : black;
+}
+
+.login{
+  margin-top: 30%;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 10px;
+  border-radius : 5;
+}
+#loginpassword{
+  margin-top : 10%;
+}
+.next, .modalbutton{
+  border-radius: 50%;
+  font-size: 32px;
+  padding: 6px 18px;
+  margin: 10% 40% 5%;
+}
+.input-label{
+  margin-left:30%;
+  width: 100%;
+}
+.item-complex .item-content, .item-radio .item-content,.menuitem{
+  background-color: transparent;
+}
+#profilePic{
+  border-radius: 50%;
+  margin: 5% 25%;
+  width: 50%;
+}
+#profileUsername{
+  text-align: end;
+  width: 100%;
+  font-size: x-large;
+  padding: 0;
+}
+.ion-edit, .modalclose{
+  float : right;
+  background-color: transparent;
+  font-size:30px;
+}
+
+.bar .button, .bar button{
+  background-color: transparent;
+  font-size:28px;
+}
+.property{
+  float: left;
+  font-size: large;
+}
+.value{
+  float: left;
+  margin-left: 10px;
+  margin-top: 20%;
+  font-size: larger;
+}
+.viewProfile{
+  display: table-cell;
+  width: 100%;
+}
+.editProfile, .createTask{
+  margin-top: 10px;
+  padding:10px;
+  width: 100%;
+  background-color: rgba(17, 17, 17, 0.09);
+}
+.noTask{
+  margin-top: 15%;
+  text-align: center;
+}
+.home{
+margin-top: 10%;
+}
+.assertive, .balanced{
+  float: right;
+  font-size: 20px;
+  background-color : transparent;
+  border: none;
+}
+.createdTime{
+  font-size: x-small;
+}
+.card{
+  background-color: transparent;
+}
+.cardheader{
+  background-color: rgba(250, 235, 215, 0.56);
+}
+.cardfooter{
+   background-color: rgba(0, 0, 0, 0.08);
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: red;
+}
+.signup{
+  border-radius: 10%;
+  padding: 10px 18px;
+  margin: 10% 38% 5%;
+}
+.viewTask{
+  margin-top: 10px;
+  padding:10px;
+  width: 100%;
+  background-color: transparent;
+}
+.saveTask{
+  font-size: medium;
+  border-radius: 10%;
+  padding: 9px 18px;
+  margin: 10% 36% 5%;
+}
+.viewUserImg{
+  border-radius : 50%;
+  height: 100px;
+}
+.viewUsername{
+  font-size: 30px;
+  line-height: 60px;
+}
+.alertText{
+  color: red;
+}

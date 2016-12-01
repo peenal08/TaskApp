@@ -1,0 +1,29 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class = "title">Create Task</h1>
+    <button class = "button icon icon-right ion-ios-close-outline modalclose" ng-click = "closeModal()"></button>
+
+  </ion-header-bar>
+
+  <ion-content >
+
+    <div >
+      <ion-item class="item item-input createTask" ng-show="isAdmin">
+        <input type="text" placeholder="Username" ng-model="modals.username" required/>
+      </ion-item>
+
+      <ion-item class="item item-input createTask">
+        <input type="text" placeholder="Enter the task" ng-model="modals.taskname" required/>
+      </ion-item>
+
+      <textarea class="createTask" rows="10" placeholder="Enter task description" maxlength="300" ng-model="modals.text" required></textarea>
+
+    </div>
+
+    <button class="button ion-chevron-right modalbutton" ng-click="saveTask()">
+    </button>
+
+
+
+  </ion-content>
+</ion-modal-view>

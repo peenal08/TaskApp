@@ -1,0 +1,30 @@
+<ion-view>
+  <ion-header-bar>
+    <h1 class = "title">Edit Task</h1>
+  </ion-header-bar>
+
+  <ion-content>
+
+    <button class = "button ion-chevron-left" ng-click="back()"></button>
+
+    <div >
+      <ion-item class="viewTask" ng-show="isAdmin">
+        <label>User : {{task.username}}</label>
+      </ion-item>
+
+      <ion-item class="item item-input viewTask">
+        <label>Task : {{task.taskname}}</label>
+      </ion-item>
+
+      <textarea class="createTask" rows="10" maxlength="300" ng-model="task.text"></textarea>
+
+
+    </div>
+
+    <button class="button button-small saveTask" ng-click="saveTask()">Save Task
+    </button>
+
+
+
+  </ion-content>
+</ion-view>
